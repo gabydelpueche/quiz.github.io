@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+.active-slide{
+    opacity: 1;
+    z-index: 2;
+  }
+
+#head{
+    background-image:linear-gradient(to bottom right, #A3B18A, #9cbd63) ;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 2vh;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 40px;
+    color: white;
+    border-bottom: #314d36 20px double;
+    z-index: 0;
+}
+
+.circle{ 
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+}
+
+
+
+#quiz{
+    background-color: #3A5A40;
+    position: relative;
+    margin-top: 12vh;
+    margin-left: 30vw;
+    height: 60vh;
+    width: 40vw;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 10px;
+    box-shadow: 10px 10px #A3B18A;
+    border: #314d36 10px double;
+    z-index: 3;
+}
+
+.question{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.answer{
+    display: flex;
+    
+    justify-content: center;
+}
+
+#radio{
+    width: 20px;
+    height: 20px;
+}
+
+input{
+    background-color: #929f7c;
+    border: white 1px solid;
+    color: white;
+    grid-column: 1/ span 2;
+    width: 30vw;
+    height: 10vh;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+
+.killme{
+    display: flex;
+    justify-content: center;
+}
+
+#sub, #previous, #next, #restart{
+    background-color: #929f7c;
+    color: white;
+    border: white 2px solid;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+    position:relative;
+    z-index: 3;
+}
+
+#sub:hover{
+    background-color: white;
+    color: #38a3a5;
+    border: #38a3a5 2px solid;
+}
+
+#next:hover{
+    background-color: white;
+    color: #38a3a5;
+    border: #38a3a5 2px solid;
+}
+
+#previous:hover{
+    background-color: white;
+    color: #38a3a5;
+    border: #38a3a5 2px solid;
+}
+
+#result{
+        font-size: 20px;
+        margin-top: 2vh;
+        margin-left: 1vw;
+}
+
+#a {
+    width: 100px;
+    height: 100px;
+    border: #38a3a5 10px double;
+    border-radius: 50%;
+    position: relative;
+    animation: a 3s 2s infinite alternate;
+    margin-left: 10%;
+    opacity: 0;
+}
+
+@keyframes a{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .5;
+        scale: 2;
+    }
+}
+
+#b {
+    width: 100px;
+    height: 100px;
+    border: #3A5A40 10px solid;
+    border-radius: 50%;
+    position: relative;
+    animation: b 3s 4s infinite alternate;
+    margin-left: 30%;
+    opacity: 0;
+}
+
+@keyframes b{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+        scale: 2;
+    }
+}
+
+#c {
+    width: 100px;
+    height: 100px;
+    border: #9cbd63 10px solid;
+    border-radius: 50%;
+    position: relative;
+    animation: c 3s 8s infinite alternate;
+    margin-left: 80%;
+    opacity: 0;
+}
+
+@keyframes c{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+        scale: 3;
+    }
+}
+
+#d {
+    width: 100px;
+    height: 100px;
+    border: #314d36 10px double;
+    border-radius: 50%;
+    position: relative;
+    animation: d 3s 10s infinite alternate;
+    margin-left: 20%;
+    margin-top: 5%;
+    opacity: 0;
+}
+
+@keyframes d{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+        scale: 2;
+    }
+}
+
+#e {
+    width: 100px;
+    height: 100px;
+    border:  #3A5A40 10px double;
+    border-radius: 50%;
+    position: relative;
+    animation: e 3s 6s infinite alternate;
+    margin-left: 60%;
+    opacity: 0;
+}
+
+@keyframes e{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+        scale: 4;
+    }
+}
